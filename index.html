@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- SEO -->
+  <title>ShopEase — Products Listing</title>
+  <meta name="description" content="ShopEase product listing — browse high quality products, filter and view details. Responsive product listing page built with vanilla HTML/CSS/JS." />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Hreflang / canonical (example) -->
+  <link rel="canonical" href="https://yourdomain.com/plp" />
+
+  <!-- Open Graph (optional) -->
+  <meta property="og:title" content="ShopEase — Products Listing" />
+  <meta property="og:description" content="Responsive product listing page built with vanilla HTML/CSS/JS." />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Minimal JSON-LD schema (placeholder; updated dynamically by app.js later) -->
+  <script type="application/ld+json" id="product-schema">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "ShopEase Products",
+    "itemListElement": []
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="ShopEase Home">
+        <h1>ShopEase</h1>
+      </a>
+      <nav class="top-nav" aria-label="Main navigation">
+        <a href="#products">Products</a>
+        <a href="#about">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="hero" class="hero">
+      <h2>Discover Featured Products</h2>
+      <p class="lead">Handpicked items. Fast load. Mobile-first design.</p>
+    </section>
+
+    <section id="controls" class="controls" aria-label="Product controls">
+      <div class="controls-left">
+        <label for="category-select" class="sr-only">Filter category</label>
+        <select id="category-select" aria-label="Filter by category">
+          <option value="all">All categories</option>
+        </select>
+      </div>
+      <div class="controls-right">
+        <label for="search" class="sr-only">Search products</label>
+        <input id="search" type="search" placeholder="Search products..." aria-label="Search products" />
+      </div>
+    </section>
+
+    <section id="products" class="product-grid" aria-label="Product listings">
+      <!-- product cards inserted here by JavaScript -->
+      <div id="grid-placeholder" class="grid-placeholder">Loading products…</div>
+    </section>
+
+    <section id="about" class="about">
+      <h2>About this demo</h2>
+      <p>Built using semantic HTML, responsive CSS grid and minimal JavaScript. Can be ported to React/Next.js for SSR and extended for SEO and server side rendering.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> ShopEase — Demo PLP</p>
+    </div>
+  </footer>
+
+  <!-- Script (app.js) -->
+  <script src="app.js" defer></script>
+</body>
+</html>
